@@ -66,12 +66,12 @@ void draw() {
         oldTime = millis();
       }
     if (endgame==true) {
-        background(random(255), random(255), random(255));
-        textMode(CENTER);
+        background(0);
+        textAlign(CENTER);
         text("GAME OVER", width/2, height/2);
     }
   }
-}
+ }
 }
 void mousePressed() {
     start=true;
