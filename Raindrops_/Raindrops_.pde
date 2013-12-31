@@ -65,7 +65,7 @@ void draw() {
         index++;
         oldTime = millis();
       }
-    if (gameover==true) {
+    if (endgame==true) {
         background(random(255), random(255), random(255));
         textMode(CENTER);
         text("GAME OVER", width/2, height/2);
