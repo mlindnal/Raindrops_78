@@ -7,8 +7,11 @@ Catcher catcher;
 int score;
 boolean start;
 boolean stop;
+boolean endgame;
+boolean levelup;
 int wdth = 100;
 int hgt = 50;
+int lives;
 
 void setup() {
   background = loadImage("rainmakerbackground.jpg"); //set background
@@ -18,6 +21,10 @@ void setup() {
     d[i] = new Drops();
   }
   catcher = new Catcher();
+  endgame=false;
+  lives=3;
+  start=false;
+  levelup=false;
 }
 
 void draw() {
@@ -30,11 +37,13 @@ void draw() {
     textSize(20);
     text("Start", width/2, height/2);
   }
-  if (start==true) {
+  if (start==true && lvelup=false;) {
     background(background);
     textSize(72);
     fill(237, 255, 3);
     text(score, 10, 100);
+    catcher.display();
+    catcher.move();
     for (int i = 0; i < index; i++) {
       d[i].display();
       d[i].drop();
@@ -43,14 +52,23 @@ void draw() {
         score++;
         threshold-=10;
       }
+    if (d[i].loc.y>height && d[i].loc.y<height+d[i].d/8) {
+        lives--;
+      }  
+      if (lives==0) {
+        endgame=true;
     }
-    catcher.display();
-    catcher.move();
+    }
+   
     if (millis() - oldTime > threshold) {
       if (index < d.length) {
         index++;
         oldTime = millis();
       }
+    if (gameover==true) {
+        background(random(255), random(255), random(255));
+        textMode(CENTER);
+        text("GAME OVER", width/2, height/2);
     }
   }
 }
