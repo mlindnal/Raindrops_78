@@ -16,5 +16,13 @@ If you have missed 3 raindrops, then you lose the game.
 
 To reset the game after you have lost press R on your keyboard.
 
+BUGS AND GLITCHES
+============
+The game over screen only flashes but does not end the game as it is flashing the game is still running.
+
+Half of a raindrop is off the screen.
+
+
+
 
 
