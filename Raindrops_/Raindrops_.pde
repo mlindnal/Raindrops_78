@@ -19,7 +19,7 @@ void setup() {
   for (int i = 0; i < d.length; i++) { 
     d[i] = new Drops();
   }
-  catcher = new Catcher();
+  catcher = new Catcher(); //declare booleans, varialbes, and a catcher
   endgame=false;
   lives=3;
   start=false;
@@ -27,7 +27,7 @@ void setup() {
 }
 
 void draw() {
-  if (start==false) {
+  if (start==false) { //if the game is not started then it will not run and a start screen will be present
   rectMode(CENTER);
   fill(0,255,0);
   rect(width/2,height/2,wdth,hgt);
@@ -36,7 +36,7 @@ void draw() {
     textSize(20);
     text("Start", width/2, height/2);
   }
-  if (start==true && stop==false;) {
+  if (start==true && stop==false;) { //if the game is started then it will run accordingly 
     background(background);
     textSize(72);
     fill(237, 255, 3);
@@ -46,24 +46,24 @@ void draw() {
     for (int i = 0; i < index; i++) {
       d[i].display();
       d[i].drop();
-      if (catcher.catchDrop(d[i]) == true) {
+      if (catcher.catchDrop(d[i]) == true) { 
         d[i].shoo();
         score++;
         threshold-=10;
       }
-    if (d[i].loc.y>height && d[i].loc.y<height+d[i].d/4) {
+    if (d[i].loc.y>height && d[i].loc.y<height+d[i].d/4) { //if the raindrop has passed the the bottom of the screen then a life should be taken away
         lives--;
       }  
       if (lives==0) {
         endgame=true;
     }
     }
-    if (millis() - oldTime > threshold) {
+    if (millis() - oldTime > threshold) { //time for set intervals of raindrops
       if (index < d.length) {
         index++;
         oldTime = millis();
       }
-    if (endgame==true) {
+    if (endgame==true) { if the game is over then the game over screen will appear
         background(255,0,0);
         textAlign(CENTER);
         text("GAME OVER", width/2, height/2);
@@ -71,10 +71,10 @@ void draw() {
   }
  }
 }
-void mousePressed() {
+void mousePressed() { //press to start the game
     start=true;
   }
-void keyPressed(){
+void keyPressed(){ // if the game is over press r to reset the game
  if(key == 'r'){
   background(0);
    start=false;
