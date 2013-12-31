@@ -8,7 +8,6 @@ int score;
 boolean start;
 boolean stop;
 boolean endgame;
-boolean levelup;
 int wdth = 100;
 int hgt = 50;
 int lives;
@@ -24,7 +23,7 @@ void setup() {
   endgame=false;
   lives=3;
   start=false;
-  levelup=false;
+ stop=false;
 }
 
 void draw() {
@@ -41,7 +40,7 @@ void draw() {
     background(background);
     textSize(72);
     fill(237, 255, 3);
-    text(score, 10, 100);
+    text(score, height/3,width/2);
     catcher.display();
     catcher.move();
     for (int i = 0; i < index; i++) {
@@ -52,21 +51,20 @@ void draw() {
         score++;
         threshold-=10;
       }
-    if (d[i].loc.y>height && d[i].loc.y<height+d[i].d/8) {
+    if (d[i].loc.y>height && d[i].loc.y<height+d[i].d/4) {
         lives--;
       }  
       if (lives==0) {
         endgame=true;
     }
     }
-   
     if (millis() - oldTime > threshold) {
       if (index < d.length) {
         index++;
         oldTime = millis();
       }
     if (endgame==true) {
-        background(0);
+        background(255,0,0);
         textAlign(CENTER);
         text("GAME OVER", width/2, height/2);
     }
