@@ -36,7 +36,7 @@ void draw() {
     textSize(20);
     text("Start", width/2, height/2);
   }
-  if (start==true && levelup==false;) {
+  if (start==true && stop==false;) {
     background(background);
     textSize(72);
     fill(237, 255, 3);
