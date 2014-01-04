@@ -2,15 +2,15 @@ PImage background;
 int index = 1;
 int oldTime = 0;
 int threshold = 2000;
-Drops[] d = new Drops[700]; //an array which makes exactly 700 raindrops
-Catcher catcher;
 int score;
 boolean start;
-boolean stop;
 boolean endgame;
+boolean win;
 int wdth = 100;
 int hgt = 50;
 int lives;
+Drops[] d = new Drops[700]; //an array which makes exactly 700 raindrops
+Catcher catcher;
 
 void setup() {
   background = loadImage("rainmakerbackground.jpg"); //set background
@@ -22,7 +22,7 @@ void setup() {
   endgame=false;
   lives=3;
   start=false;
- stop=false;
+ win=false;
 }
 void draw() {
   if (start==false) { //if the game is not started then it will not run and a start screen will be present
@@ -34,7 +34,7 @@ void draw() {
     textSize(20);
     text("Start", width/2, height/2);
   }
-  if (start==true && stop==false) { //if the game is started then it will run accordingly 
+  if (start==true && win==false) { //if the game is started then it will run accordingly 
     background(background);
     textSize(72);
     fill(237, 255, 3);
@@ -67,7 +67,16 @@ void draw() {
         text("GAME OVER", width/2, height/2);
    }
   }
+ if (score>=30){
+   win=true;
  }
+if (win==true) { //if the game has been one, 
+background(0,255,0);
+        textAlign(CENTER);
+        text("YOU WIN", width/2, height/2);
+      }
+println(lives);
+  }
 }
 void mousePressed() { //press to start the game
     start=true;
@@ -76,7 +85,8 @@ void keyPressed(){ // if the game is over press r to reset the game
  if(key == 'r'){
   background(0);
    start=false;
-  stop=false;
+   endgame=false;
+   win=false;
   score=0;
  }
 }
