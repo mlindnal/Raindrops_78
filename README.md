@@ -22,7 +22,7 @@ BUGS AND GLITCHES
 ============
 The game over screen only flashes and as it is flashing the game is still running.
 
-Half of a raindrop is off the screen.
+Half of a raindrop is off the screen but it's a rare occurence.
 
 
 
