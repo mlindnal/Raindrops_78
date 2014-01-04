@@ -12,13 +12,15 @@ If it's caught the score increases.
 
 If it is caught, the raindrops go away. 
 
+If you have caught 30 raindrops, then you win the game.
+
 If you have missed 3 raindrops, then you lose the game. 
 
-To reset the game after you have lost press R on your keyboard.
+To reset the game after you have lost or won press R on your keyboard.
 
 BUGS AND GLITCHES
 ============
-The game over screen only flashes but does not end the game as it is flashing the game is still running.
+The game over screen only flashes and as it is flashing the game is still running.
 
 Half of a raindrop is off the screen.
 
