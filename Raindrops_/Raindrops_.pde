@@ -18,8 +18,11 @@ void setup() {
   start=false;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   for (int i = 0; i < d.length; i++) {
 =======
+=======
+>>>>>>> 63299b01f681357f8b4c388c3dd341145991bca2
 =======
 >>>>>>> 63299b01f681357f8b4c388c3dd341145991bca2
   for (int i = 0; i < d.length; i++) { 
@@ -45,7 +48,11 @@ void draw() {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (start==true && stop==false;) { //if the game is started then it will run accordingly
+=======
+  if (start==true && stop==false;) { //if the game is started then it will run accordingly 
+>>>>>>> 63299b01f681357f8b4c388c3dd341145991bca2
 =======
   if (start==true && stop==false;) { //if the game is started then it will run accordingly 
 >>>>>>> 63299b01f681357f8b4c388c3dd341145991bca2
@@ -70,7 +77,11 @@ void draw() {
         lives--;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       }
+=======
+      }  
+>>>>>>> 63299b01f681357f8b4c388c3dd341145991bca2
 =======
       }  
 >>>>>>> 63299b01f681357f8b4c388c3dd341145991bca2
@@ -105,9 +116,12 @@ void keyPressed(){ // if the game is over press r to reset the game
   score=0;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  }
 }
 =======
+=======
+>>>>>>> 63299b01f681357f8b4c388c3dd341145991bca2
 =======
 >>>>>>> 63299b01f681357f8b4c388c3dd341145991bca2
  } 
