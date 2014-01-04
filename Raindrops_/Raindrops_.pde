@@ -17,8 +17,11 @@ void setup() {
   size(background.width, background.height);
   start=false;
 <<<<<<< HEAD
+<<<<<<< HEAD
   for (int i = 0; i < d.length; i++) {
 =======
+=======
+>>>>>>> 63299b01f681357f8b4c388c3dd341145991bca2
   for (int i = 0; i < d.length; i++) { 
 >>>>>>> 63299b01f681357f8b4c388c3dd341145991bca2
     d[i] = new Drops();
@@ -41,7 +44,11 @@ void draw() {
     text("Start", width/2, height/2);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (start==true && stop==false;) { //if the game is started then it will run accordingly
+=======
+  if (start==true && stop==false;) { //if the game is started then it will run accordingly 
+>>>>>>> 63299b01f681357f8b4c388c3dd341145991bca2
 =======
   if (start==true && stop==false;) { //if the game is started then it will run accordingly 
 >>>>>>> 63299b01f681357f8b4c388c3dd341145991bca2
@@ -62,7 +69,11 @@ void draw() {
     if (d[i].loc.y>height && d[i].loc.y<height+d[i].d/4) { //if the raindrop has passed the the bottom of the screen then a life should be taken away
         lives--;
 <<<<<<< HEAD
+<<<<<<< HEAD
       }
+=======
+      }  
+>>>>>>> 63299b01f681357f8b4c388c3dd341145991bca2
 =======
       }  
 >>>>>>> 63299b01f681357f8b4c388c3dd341145991bca2
@@ -93,9 +104,12 @@ void keyPressed(){ // if the game is over press r to reset the game
   stop=false;
   score=0;
 <<<<<<< HEAD
+<<<<<<< HEAD
  }
 }
 =======
+=======
+>>>>>>> 63299b01f681357f8b4c388c3dd341145991bca2
  } 
 }
 
