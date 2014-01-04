@@ -16,7 +16,11 @@ void setup() {
   background = loadImage("rainmakerbackground.jpg"); //set background
   size(background.width, background.height);
   start=false;
+<<<<<<< HEAD
   for (int i = 0; i < d.length; i++) {
+=======
+  for (int i = 0; i < d.length; i++) { 
+>>>>>>> 63299b01f681357f8b4c388c3dd341145991bca2
     d[i] = new Drops();
   }
   catcher = new Catcher(); //declare booleans, varialbes, and a catcher
@@ -36,7 +40,11 @@ void draw() {
     textSize(20);
     text("Start", width/2, height/2);
   }
+<<<<<<< HEAD
   if (start==true && stop==false;) { //if the game is started then it will run accordingly
+=======
+  if (start==true && stop==false;) { //if the game is started then it will run accordingly 
+>>>>>>> 63299b01f681357f8b4c388c3dd341145991bca2
     background(background);
     textSize(72);
     fill(237, 255, 3);
@@ -46,14 +54,18 @@ void draw() {
     for (int i = 0; i < index; i++) {
       d[i].display();
       d[i].drop();
-      if (catcher.catchDrop(d[i]) == true) {
+      if (catcher.catchDrop(d[i]) == true) { 
         d[i].shoo();
         score++;
         threshold-=10;
       }
     if (d[i].loc.y>height && d[i].loc.y<height+d[i].d/4) { //if the raindrop has passed the the bottom of the screen then a life should be taken away
         lives--;
+<<<<<<< HEAD
       }
+=======
+      }  
+>>>>>>> 63299b01f681357f8b4c388c3dd341145991bca2
       if (lives==0) {
         endgame=true;
     }
@@ -80,5 +92,11 @@ void keyPressed(){ // if the game is over press r to reset the game
    start=false;
   stop=false;
   score=0;
+<<<<<<< HEAD
  }
 }
+=======
+ } 
+}
+
+>>>>>>> 63299b01f681357f8b4c388c3dd341145991bca2
